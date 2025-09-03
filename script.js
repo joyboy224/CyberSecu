@@ -593,3 +593,16 @@ const appData = {
                 "Savoir réagir face au cyberharcèlement"
             ],
             content: {
+                intro: "Les jeunes sont les principaux utilisateurs d'internet et des réseaux sociaux. Cependant, ils sont aussi vulnérables aux dangers en ligne.",
+                modules: [
+                    { 
+                        title: "Module 1 : Comprendre les réseaux sociaux",
+                        content: "• Paramètres de confidentialité\n• Partage d'informations personnelles\n• Reconnaître les faux profils\n• Importance de la réputation en ligne"
+                    },
+                    { 
+                        title: "Module 2 : Cyberharcèlement",
+                        content: "• Qu'est-ce que le cyberharcèlement\n• Comment le reconnaître\n• Que faire si vous en êtes victime\n• Soutenir les amis victimes"
+                    },
+                    
+                         ]
+}; 
