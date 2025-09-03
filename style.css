@@ -674,8 +674,8 @@ body {
     }
     .nav {
         flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
+        gap: 0;
+        width: 100%;
     }
 }
 
@@ -2154,6 +2154,84 @@ body {
     .timeline-title {
         font-size: 2rem;
     }
+
+    /* Hamburger Menu Mobile */
+    .nav-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        z-index: 1100;
+    }
+
+    .nav-toggle .hamburger,
+    .nav-toggle .hamburger::before,
+    .nav-toggle .hamburger::after {
+        content: "";
+        display: block;
+        background-color: var(--white);
+        height: 3px;
+        border-radius: 2px;
+        position: absolute;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle .hamburger {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-toggle .hamburger::before {
+        top: -10px;
+    }
+
+    .nav-toggle .hamburger::after {
+        bottom: -10px;
+    }
+
+    #primary-navigation {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        flex-direction: column;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    #primary-navigation.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav a {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        text-align: center;
+        color: var(--white);
+    }
+
+    .nav a:hover {
+        background: rgba(255,255,255,0.1);
+    }
 }
 
 @media (max-width: 480px) {
@@ -2183,4 +2261,132 @@ body {
 .success-banner h2,
 .success-banner p {
     color: white !important;
+}
+
+/* ==============================================
+   CART INDICATOR STYLES
+============================================== */
+.cart-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(22, 160, 133, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 1.5rem;
+    border: 3px solid var(--white);
+}
+
+.cart-indicator:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(22, 160, 133, 0.6);
+}
+
+.cart-indicator:active {
+    transform: scale(0.95);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cart-count.hidden {
+    display: none;
+}
+
+.cart-count.animate {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Cart tooltip */
+.cart-tooltip {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cart-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border: 5px solid transparent;
+    border-top-color: var(--dark-color);
+}
+
+.cart-indicator:hover .cart-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive cart indicator */
+@media (max-width: 768px) {
+    .cart-indicator {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .cart-count {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+        top: -6px;
+        right: -6px;
+    }
+
+    .cart-tooltip {
+        bottom: 60px;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
 }
