@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Gros Mythes d'Internet - CyberSecure Sénégal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mythes Details Styles */
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(139, 0, 0, 0.1) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #ffaaaa;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .warning-banner {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 68, 68, 0.3);
+            border: 2px solid rgba(255, 68, 68, 0.5);
+        }
+
+        .warning-banner h2 {
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            font-size: 2.2rem;
+        }
+
+        .warning-banner p {
+            color: #ffeaea;
+            font-size: 1.1rem;
+        }
+
+        .myths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .myth-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 2px solid rgba(255, 68, 68, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(255, 68, 68, 0.15);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .myth-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 68, 68, 0.3);
+            border-color: rgba(255, 68, 68, 0.6);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+        }
+
+        .myth-icon {
+            font-size: 4rem;
+            color: #ff4444;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+        }
+
+        .myth-card h3 {
+            color: #ffaaaa;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            text-shadow: 0 0 5px rgba(255, 170, 170, 0.3);
+        }
+
+        .myth-card .myth-text {
+            color: #ffdddd;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .myth-card .reality-text {
+            color: #aaffaa;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 500;
+            border-left: 4px solid #4CAF50;
+            padding-left: 20px;
+            background: rgba(76, 175, 80, 0.1);
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 40px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 25px rgba(76, 175, 80, 0.6);
+            background: linear-gradient(45deg, #45a049, #2E8B57);
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #ffaaaa;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 170, 170, 0.3);
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .myths-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberSecure Sénégal</span>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#mythes-realites">Mythes & Réalités</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1><i class="fas fa-exclamation-triangle"></i> Les Gros Mythes d'Internet</h1>
+            <p>Ce que vous croyez savoir sur Internet pourrait vous mettre en danger</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="warning-banner">
+            <h2><i class="fas fa-skull-crossbones"></i> ATTENTION : Ces Mythes Peuvent Vous Coûter Cher !</h2>
+            <p>Les idées reçues sur Internet circulent partout, mais elles peuvent vous exposer à de graves dangers</p>
+        </div>
+
+        <!-- Mythes sur Internet -->
+        <div class="section-title">
+            <h2><i class="fas fa-globe"></i> Mythes sur Internet</h2>
+            <p>Les croyances dangereuses qui circulent sur le web</p>
+        </div>
+
+        <div class="myths-grid">
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>"Internet est anonyme"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Beaucoup pensent qu'Internet permet une navigation complètement anonyme et que personne ne peut les tracer.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Rien n'est vraiment anonyme sur Internet. Votre FAI, les sites web, les gouvernements et les hackers peuvent tous tracer vos activités. Même avec un VPN, vos données peuvent être compromises.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>"Les mots de passe complexes suffisent"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Un mot de passe long et complexe protège complètement votre compte.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Les mots de passe peuvent être crackés, volés via phishing, ou compromis par des breaches. Utilisez l'authentification à deux facteurs (2FA) et un gestionnaire de mots de passe.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>"Les antivirus suffisent à me protéger"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Avec un bon antivirus, je suis protégé contre toutes les menaces.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Les antivirus ne protègent que contre les malwares connus. Ils ne peuvent rien contre le phishing, les attaques sociales, ou les nouvelles menaces zero-day.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>"Mon téléphone est plus sûr que mon ordinateur"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Les smartphones sont moins vulnérables que les ordinateurs.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Les téléphones contiennent autant de données sensibles (photos, contacts, emails) et sont souvent moins sécurisés. Les apps malveillantes et les attaques via SMS sont courantes.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>"Le WiFi public est sûr si je ne fais rien de sensible"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Les réseaux WiFi publics sont acceptables pour des tâches non sensibles.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Les WiFi publics peuvent être spoofés par des hackers. Toutes vos données peuvent être interceptées, même pour des sites HTTPS. Utilisez toujours un VPN.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>"Je peux reconnaître un email de phishing"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Les emails de phishing sont faciles à identifier grâce aux fautes d'orthographe.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Les phishing modernes sont sophistiqués avec des emails parfaits, des domaines similaires, et des urgences créées pour vous faire cliquer sans réfléchir.
+                </div>
+            </div>
+        </div>
+
+        <!-- Mythes sur le Dark Web -->
+        <div class="section-title">
+            <h2><i class="fas fa-mask"></i> Mythes sur le Dark Web</h2>
+            <p>Les idées fausses dangereuses sur le web caché</p>
+        </div>
+
+        <div class="myths-grid">
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-ghost"></i>
+                </div>
+                <h3>"Le Dark Web est illégal"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Tout ce qui se passe sur le Dark Web est criminel et dangereux.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Le Dark Web héberge aussi des journalistes, des dissidents politiques, et des whistleblowers. Il n'est pas illégal en soi, mais nécessite Tor pour y accéder.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-skull"></i>
+                </div>
+                <h3>"Le Dark Web est plein de hackers qui m'attaquent"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Dès que vous accédez au Dark Web, vous êtes automatiquement victime d'attaques.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Le Dark Web n'est pas plus dangereux que le web normal si vous utilisez Tor correctement. Les vrais dangers viennent des scams et des malwares, pas des attaques automatiques.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <h3>"Tor me rend complètement anonyme"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Avec Tor, personne ne peut me tracer ou me surveiller.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Tor améliore l'anonymat mais n'est pas infaillible. Les attaques de correlation, les malwares, et les erreurs humaines peuvent compromettre votre anonymat.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>"Tout sur le Dark Web coûte de l'argent"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Le Dark Web est un marché noir où tout se monnaye.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Le Dark Web contient aussi des ressources gratuites : forums de discussion, wikis éducatifs, et communautés légitimes qui utilisent l'anonymat pour se protéger.
+                </div>
+            </div>
+        </div>
+
+        <!-- Mythes sur l'Intelligence Artificielle -->
+        <div class="section-title">
+            <h2><i class="fas fa-robot"></i> Mythes sur l'Intelligence Artificielle</h2>
+            <p>Les croyances erronées sur l'IA et ses dangers</p>
+        </div>
+
+        <div class="myths-grid">
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>"L'IA va prendre tous nos emplois"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> L'intelligence artificielle va remplacer tous les emplois humains dans les prochaines années.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> L'IA va transformer les emplois, pas les éliminer. Elle créera de nouveaux rôles et augmentera la productivité humaine plutôt que de la remplacer complètement.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3>"L'IA est dangereuse et va dominer l'humanité"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> L'IA va devenir consciente et prendre le contrôle du monde.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> L'IA actuelle est un outil puissant mais pas conscient. Les vrais dangers viennent de son mauvais usage par les humains, pas d'une "révolte des machines".
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>"L'IA peut lire dans mes pensées"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Les IA peuvent accéder à vos pensées ou contrôler votre esprit.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> L'IA analyse des données que vous fournissez (textes, images), mais elle ne peut pas lire vos pensées. La confidentialité dépend de comment vous utilisez ces outils.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>"L'IA sait tout et ne se trompe jamais"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> L'IA est infaillible et détient toutes les connaissances.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> L'IA peut produire des réponses convaincantes mais inexactes (hallucinations). Elle est basée sur des données d'entraînement limitées et peut perpétuer des biais.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>"L'IA va casser tous les mots de passe"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> L'IA rend tous les mots de passe obsolètes.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> L'IA peut cracker plus rapidement les mots de passe faibles, mais les bonnes pratiques (longueur, complexité, 2FA) restent efficaces contre les attaques automatisées.
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h3>"Les assistants vocaux écoutent toujours"</h3>
+                <div class="myth-text">
+                    <strong>MYTHE :</strong> Siri, Alexa et Google écoutent constamment toutes vos conversations.
+                </div>
+                <div class="reality-text">
+                    <strong>RÉALITÉ :</strong> Ces assistants n'écoutent que lorsqu'ils détectent leur mot-clé d'activation. Les enregistrements sont limités et la plupart sont supprimés automatiquement.
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <a href="index.html#mythes-realites" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Retour aux Réalités d'Internet
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: rgba(0, 0, 0, 0.8); margin-top: 60px;">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i> CyberSecure Sénégal
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#accueil">Accueil</a>
+                    <a href="index.html#mythes-realites">Mythes & Réalités</a>
+                    <a href="formations.html">Formations</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

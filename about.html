@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Fantômes de la Cybersécurité - CyberSecure Sénégal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dark mysterious theme overrides */
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+        }
+
+        .logo {
+            color: #8a2be2;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+        }
+
+        .nav-link {
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #8a2be2;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.1);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .section-title h1 {
+            color: #8a2be2;
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ghost-card {
+            background: rgba(20, 20, 40, 0.8);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .ghost-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            border-color: rgba(138, 43, 226, 0.6);
+        }
+
+        .ghost-icon {
+            font-size: 3rem;
+            color: #8a2be2;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+        }
+
+        .ghost-card h2 {
+            color: #8a2be2;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.3);
+        }
+
+        .ghost-card p {
+            color: #d0d0d0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .mystery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .warning-banner {
+            background: linear-gradient(45deg, rgba(220, 20, 60, 0.2), rgba(138, 43, 226, 0.2));
+            border: 1px solid rgba(220, 20, 60, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .warning-banner h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .warning-banner p {
+            color: #ffb3b3;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #8a2be2;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 25px rgba(138, 43, 226, 0.6);
+            background: linear-gradient(45deg, #9932cc, #6a0dad);
+        }
+
+        /* Animated background elements */
+        .floating-ghost {
+            position: fixed;
+            font-size: 2rem;
+            color: rgba(138, 43, 226, 0.1);
+            pointer-events: none;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        /* Add some floating ghost elements */
+        .floating-ghost:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .floating-ghost:nth-child(2) { left: 30%; animation-delay: 5s; }
+        .floating-ghost:nth-child(3) { left: 60%; animation-delay: 10s; }
+        .floating-ghost:nth-child(4) { left: 80%; animation-delay: 15s; }
+    </style>
+</head>
+<body>
+    <!-- Floating ghost elements for atmosphere -->
+    <div class="floating-ghost"><i class="fas fa-ghost"></i></div>
+    <div class="floating-ghost"><i class="fas fa-ghost"></i></div>
+    <div class="floating-ghost"><i class="fas fa-ghost"></i></div>
+    <div class="floating-ghost"><i class="fas fa-ghost"></i></div>
+    <!-- ==============================================
+         HEADER & NAVIGATION
+    ============================================== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+                    <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                    <span>CyberSecure Sénégal</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#comprendre-internet" class="nav-link">Comprendre Internet</a></li>
+                    <li><a href="index.html#dictionnaire" class="nav-link">Dictionnaire</a></li>
+                    <li><a href="formations.html" class="nav-link">Formations</a></li>
+                    <li><a href="index.html#opportunites-risques" class="nav-link">Opportunités & Risques</a></li>
+                    <li><a href="index.html#mythes-realites" class="nav-link">Mythes & Réalités</a></li>
+                    <li><a href="index.html#ressources" class="nav-link">Ressources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         MAIN CONTENT
+    ============================================== -->
+    <main class="main">
+        <!-- SECTION QUI SOMMES NOUS -->
+        <section class="section active">
+            <div class="container">
+                <div class="section-title">
+                    <h1><i class="fas fa-ghost"></i> Les Fantômes de la Cybersécurité</h1>
+                    <p>Nous sommes les ombres invisibles qui protègent le Sénégal numérique. Des justiciers anonymes qui combattent dans l'obscurité du cyberespace, sans gloire, sans reconnaissance, mais avec une détermination inébranlable.</p>
+                </div>
+                <div class="warning-banner">
+                    <h3><i class="fas fa-exclamation-triangle"></i> ⚠️ AVERTISSEMENT ⚠️</h3>
+                    <p>Si vous lisez ceci, c'est que nous l'avons permis. Les fantômes n'apparaissent que lorsqu'ils le décident.</p>
+                </div>
+
+                <div class="mystery-grid">
+                    <div class="ghost-card">
+                        <div class="ghost-icon">
+                            <i class="fas fa-mask"></i>
+                        </div>
+                        <h2>L'Identité Masquée</h2>
+                        <p>Nous n'avons pas de noms, pas de visages. Nous sommes les fantômes du numérique, des professionnels de l'ombre qui ont choisi l'anonymat pour mieux servir. Nos identités sont protégées par des couches de cryptage et de mystère.</p>
+                    </div>
+
+                    <div class="ghost-card">
+                        <div class="ghost-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2>Les Veilleurs Silencieux</h2>
+                        <p>Nous observons, nous analysons, nous intervenons. Invisiblement, nous surveillons les menaces qui pèsent sur les citoyens sénégalais. Chaque arnaque déjouée, chaque compte protégé est notre victoire silencieuse.</p>
+                    </div>
+
+                    <div class="ghost-card">
+                        <div class="ghost-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h2>La Foudre dans l'Ombre</h2>
+                        <p>Quand les cybercriminels frappent, nous ripostons. Rapides, précis, impitoyables. Nous frappons comme l'éclair dans la nuit, laissant derrière nous seulement des traces numériques qui s'effacent d'elles-mêmes.</p>
+                    </div>
+
+                    <div class="ghost-card">
+                        <div class="ghost-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2>Les Protecteurs Anonymes</h2>
+                        <p>Notre mission : protéger les innocents. Nous formons, nous éduquons, nous équipons. Mais nous le faisons dans l'ombre, car la vraie force réside dans l'anonymat et la discrétion.</p>
+                    </div>
+                </div>
+
+                <div class="ghost-card">
+                    <div class="ghost-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h2>Pourquoi l'Ombre ?</h2>
+                    <p>Parce que la lumière attire les ennemis. Parce que l'anonymat nous rend plus efficaces. Parce que nous ne cherchons pas la gloire, seulement la justice. Nous sommes les fantômes qui protègent le Sénégal numérique, invisibles mais omniprésents.</p>
+                </div>
+
+                <div class="ghost-card">
+                    <div class="ghost-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>Notre Légion Spectrale</h2>
+                    <p>Des hackers éthiques, des experts en sécurité, des éducateurs passionnés, des bénévoles déterminés. Tous unis dans l'ombre, formant une légion de fantômes dédiée à la protection du numérique sénégalais. Chacun apporte ses compétences uniques, chacun reste anonyme.</p>
+                </div>
+
+                <div class="warning-banner">
+                    <h3><i class="fas fa-skull-crossbones"></i> À ceux qui nous cherchent...</h3>
+                    <p>Vous ne nous trouverez pas. Nous sommes partout et nulle part. Nous connaissons vos secrets, vos vulnérabilités. Mais nous ne frappons que pour protéger. Souvenez-vous : les fantômes voient tout, mais restent invisibles.</p>
+                </div>
+
+                <div class="ghost-card">
+                    <div class="ghost-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h2>Contacter les Fantômes</h2>
+                    <p>Si vous êtes victime d'une cybermenace, si vous voulez rejoindre notre légion, ou si vous avez des informations cruciales, laissez un message dans le vide numérique. Nous l'entendrons. Nous répondrons. Ou peut-être pas. C'est selon notre volonté.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="join-us.html" class="btn btn-primary" id="btnJoinUs">
+                            <i class="fas fa-users"></i>
+                            Voulez-vous nous rejoindre ?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==============================================
+         FOOTER
+    ============================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 30px; height: 30px; margin-right: 8px;">
+                    CyberSecure Sénégal
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="index.html#dictionnaire">Dictionnaire</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="index.html#ressources">Ressources</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+                <p>
+                    <a href="about.html" style="color:#8a2be2;text-decoration:underline;">Les Fantômes</a> |
+                    <a href="index.html#faq" style="color:#8a2be2;text-decoration:underline;">FAQ</a> |
+                    <a href="index.html#contact" style="color:#8a2be2;text-decoration:underline;">Contact</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+         SCRIPTS
+    ============================================== -->
+    <script src="script.js"></script>
+    <script src="script-join-us.js"></script>
+</body>
+</html>

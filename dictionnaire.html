@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionnaire des Cyber-menaces - CyberSecure Sénégal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==============================================
+         HEADER & NAVIGATION
+    ============================================== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                <span>CyberSecure Sénégal</span>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#comprendre-internet" class="nav-link">Comprendre Internet</a></li>
+                    <li><a href="dictionnaire.html" class="nav-link active">Dictionnaire</a></li>
+                    <li><a href="formations.html" class="nav-link">Formations</a></li>
+                    <li><a href="index.html#opportunites-risques" class="nav-link">Opportunités & Risques</a></li>
+                    <li><a href="index.html#mythes-realites" class="nav-link">Mythes & Réalités</a></li>
+                    <li><a href="index.html#ressources" class="nav-link">Ressources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         MAIN CONTENT
+    ============================================== -->
+    <main class="main">
+        <!-- SECTION DICTIONNAIRE -->
+        <section id="dictionnaire" class="section active">
+            <div class="container">
+                <div class="section-title">
+                    <h1><i class="fas fa-book-open"></i> Dictionnaire des Cyber-menaces</h1>
+                    <p>Comprendre les risques avec des exemples adaptés au contexte sénégalais</p>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Rechercher une menace...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <div class="threat-grid" id="threatGrid">
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Phishing</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Faux emails/sites pour voler des mots de passe.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Spear Phishing</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Phishing ciblé sur une personne précise (ex. dirigeant).</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Whaling Attack</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Attaque de phishing visant les hauts responsables (PDG).</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Malware</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Logiciels malveillants (virus, trojans, vers).</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Ransomware</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Chiffrement des fichiers contre rançon.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Spyware</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Logiciel espion qui surveille tes activités.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Keylogger</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Enregistre tout ce que tu tapes au clavier.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Rootkit</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Cache des malwares dans le système sans que l’utilisateur ne voie.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Man-in-the-Middle (MITM)</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Interception de communication entre deux parties.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Sniffing</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Capture de trafic réseau pour voler des infos.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Session Hijacking</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Vol d’une session active (ex. cookie de connexion).</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">SQL Injection</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Insérer du code SQL malveillant dans un site vulnérable.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">XSS (Cross-Site Scripting)</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Injection de scripts dans les pages web.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">DNS Spoofing</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Rediriger un site vers une fausse adresse.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">ARP Spoofing</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Usurper une adresse MAC sur un réseau local.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Brute Force Attack</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Tester plein de mots de passe jusqu’à trouver le bon.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Dictionary Attack</h3>
+                            <span class="severity-badge severity-medium">Moyenne</span>
+                        </div>
+                        <p class="threat-definition">Utiliser une liste de mots de passe courants.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">DDoS (Distributed Denial of Service)</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Saturer un serveur avec trop de requêtes.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Zero-Day Attack</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Exploitation d’une faille encore inconnue.</p>
+                    </div>
+                    <div class="threat-card">
+                        <div class="threat-header">
+                            <h3 class="threat-title">Supply Chain Attack</h3>
+                            <span class="severity-badge severity-high">Élevée</span>
+                        </div>
+                        <p class="threat-definition">Attaquer un fournisseur pour atteindre la vraie cible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         FOOTER
+    ============================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 30px; height: 30px; margin-right: 8px;">
+                    CyberSecure Sénégal
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="dictionnaire.html">Dictionnaire</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="index.html#ressources">Ressources</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="about.html">Qui sommes-nous</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+                <p>
+                    <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
+                    <a href="index.html#faq" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
+                    <a href="index.html#contact" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+         SCRIPTS
+    ============================================== -->
+    <script src="script.js"></script>
+</body>
+</html>
