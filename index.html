@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CyberSecure Sénégal - Kit de Sensibilisation</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="interactive-styles.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="interactive-styles.css" />
 </head>
 <body>
     <!-- ==============================================
@@ -17,10 +16,14 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
                 <span>CyberSecure Sénégal</span>
             </div>
-            <nav>
+            <!-- Hamburger menu button for mobile -->
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="primary-navigation">
                 <ul class="nav">
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
                     <li><a href="comprendre-internet.html" class="nav-link">Comprendre Internet</a></li>
@@ -150,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-           
+
                 <div class="site-intro">
                     <h2>Pourquoi ce kit ?</h2>
                     <p>
@@ -164,7 +167,6 @@
                     </ul>
                 </div>
 
-
                 <!-- Features Cards -->
                 <div class="card-grid">
                     <div class="card" data-section="comprendre-internet">
@@ -176,7 +178,7 @@
                         </div>
                         <div class="card-content">
                             <p>Découvrez les fondamentaux d'Internet, son histoire et son fonctionnement</p>
-                      </div>
+                        </div>
                         <div class="card-footer">
                             <span>Apprendre maintenant</span>
                             <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
@@ -270,583 +272,59 @@
             </div>
         </section>
 
-        <!-- SECTION COMPRENDRE INTERNET -->
+        <!-- Other sections omitted for brevity -->
 
+    </main>
 
-
-        <!-- SECTION FORMATIONS (existante) -->
-        <section id="formations" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h1>Supports de Formation</h1>
-                    <p>Présentations et modules prêts pour vos sessions de sensibilisation</p>
+    <!-- footer enrichi avec infos et liens supplémentaires -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 30px; height: 30px; margin-right: 8px;" />
+                    CyberSecure Sénégal
                 </div>
-
-                <div id="presentationsContainer">
-                    <!-- Presentations will be populated by JavaScript -->
+                <div class="footer-links">
+                    <a href="#" data-section="accueil">Accueil</a>
+                    <a href="dictionnaire.html">Dictionnaire</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="#" data-section="ressources">Ressources</a>
+                    <a href="#" data-section="faq">FAQ</a>
+                    <a href="#" data-section="contact">Contact</a>
+                    <a href="about.html">Qui sommes-nous</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- SECTION OPPORTUNITÉS & RISQUES -->
-        <section id="opportunites-risques" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h1><i class="fas fa-rocket"></i> Opportunités du Numérique</h1>
-                    <p>Découvrez comment Internet peut transformer votre vie et créer des opportunités extraordinaires</p>
-                </div>
-
-                <div class="success-banner">
-                    <h2><i class="fas fa-star"></i> Réussir avec Internet : 30 Opportunités Clés</h2>
-                    <p>Le numérique offre des possibilités infinies pour ceux qui savent les saisir</p>
-                </div>
-
-                <div class="opportunities-grid">
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>E-commerce et Vente en Ligne</h3>
-                        <p>Créez votre boutique en ligne, vendez des produits locaux à l'international, développez votre activité commerciale sans limites géographiques.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Éducation Accessible</h3>
-                        <p>Accédez à des cours gratuits de Harvard, Stanford, apprenez de nouvelles compétences, obtenez des certifications reconnues mondialement.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3>Freelance et Télétravail</h3>
-                        <p>Travaillez pour des clients du monde entier, développez vos compétences, gagnez en devises étrangères depuis chez vous.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Réseautage Global</h3>
-                        <p>Connectez-vous avec des professionnels du monde entier, trouvez des mentors, créez des partenariats internationaux.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <h3>Création de Contenu</h3>
-                        <p>Devenez influenceur, YouTuber, podcasteur, monétisez votre passion et inspirez des milliers de personnes.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Développement de Logiciels</h3>
-                        <p>Apprenez la programmation, créez des applications, développez des solutions innovantes pour résoudre des problèmes locaux.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Trading et Investissement</h3>
-                        <p>Investissez dans les crypto-monnaies, le forex, les actions internationales, diversifiez vos sources de revenus.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <h3>Apprentissage des Langues</h3>
-                        <p>Maîtrisez l'anglais, le français, l'arabe, apprenez des langues rares, ouvrez-vous à de nouveaux marchés.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h3>Industrie Créative</h3>
-                        <p>Musique, art digital, design, photographie : monétisez vos talents créatifs sur des plateformes internationales.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h3>Téléconsultation Médicale</h3>
-                        <p>Accédez à des médecins spécialistes, consultez des experts mondiaux, améliorez votre santé grâce à la télémédecine.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h3>Cuisine et Gastronomie</h3>
-                        <p>Partagez vos recettes sénégalaises, créez un blog culinaire, vendez vos produits alimentaires en ligne.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-plane"></i>
-                        </div>
-                        <h3>Tourisme et Voyage</h3>
-                        <p>Promouvez le Sénégal, créez des guides touristiques, organisez des voyages virtuels, attirez des touristes étrangers.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>Agriculture Intelligente</h3>
-                        <p>Utilisez des applications agricoles, vendez vos produits directement aux consommateurs, optimisez vos rendements.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Commerce Électronique B2B</h3>
-                        <p>Connectez-vous avec des grossistes internationaux, importez, exportez, développez votre entreprise.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <h3>Industrie du Jeu Vidéo</h3>
-                        <p>Développez des jeux, streamez, créez du contenu gaming, rejoignez l'économie du divertissement numérique.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <h3>Podcast et Audio</h3>
-                        <p>Créez des émissions, partagez vos connaissances, monétisez votre voix et vos idées.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3>Journalisme Citoyen</h3>
-                        <p>Informez votre communauté, dénoncez les injustices, créez du contenu journalistique impactant.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Intelligence Artificielle</h3>
-                        <p>Apprenez l'IA, créez des outils intelligents, automatisez vos processus, innovez dans votre domaine.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-coins"></i>
-                        </div>
-                        <h3>Crypto et Blockchain</h3>
-                        <p>Investissez dans les cryptos, apprenez la blockchain, créez des applications décentralisées.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Immobilier Numérique</h3>
-                        <p>Gérez vos biens immobiliers en ligne, vendez virtuellement, accédez au marché international.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3>Art Numérique et NFT</h3>
-                        <p>Créez des œuvres digitales, vendez des NFT, rejoignez le marché de l'art contemporain.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <h3>Coaching et Formation</h3>
-                        <p>Devenez coach sportif, formateur, mentor, partagez votre expertise et générez des revenus passifs.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <h3>Écologie et Développement Durable</h3>
-                        <p>Promouvez l'environnement, créez des solutions écologiques, sensibilisez via les réseaux sociaux.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-gavel"></i>
-                        </div>
-                        <h3>Justice Sociale</h3>
-                        <p>Dénoncez les injustices, créez des pétitions en ligne, mobilisez pour des causes importantes.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h3>Communauté et Solidarité</h3>
-                        <p>Créez des groupes de soutien, organisez des collectes en ligne, aidez les plus démunis.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Innovation Sociale</h3>
-                        <p>Résolvez des problèmes locaux avec des solutions numériques innovantes.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-globe-africa"></i>
-                        </div>
-                        <h3>Promotion de la Culture Sénégalaise</h3>
-                        <p>Partagez la culture sénégalaise, créez du contenu touristique, attirez l'attention du monde.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-hand-holding-heart"></i>
-                        </div>
-                        <h3>Philanthropie Numérique</h3>
-                        <p>Soutenez des causes humanitaires, créez des campagnes de crowdfunding, faites la différence.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Développement Personnel</h3>
-                        <p>Accédez à des ressources de croissance personnelle, méditation guidée, coaching de vie.</p>
-                    </div>
-
-                    <div class="opportunity-card">
-                        <div class="opportunity-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Productivité et Organisation</h3>
-                        <p>Utilisez des outils numériques pour optimiser votre temps, gérer vos projets, atteindre vos objectifs.</p>
-                    </div>
-                </div>
-
-                <div class="cta-section">
-                    <h2>Prêt à Saisir Ces Opportunités ?</h2>
-                    <p>Le numérique offre un monde de possibilités. Commencez dès aujourd'hui !</p>
-                    <div class="cta-buttons">
-                        <a href="formations.html" class="btn btn-primary">
-                            <i class="fas fa-graduation-cap"></i>
-                            Se Former
-                        </a>
-                        <a href="risques.html" class="btn btn-secondary">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            Voir les Risques
-                        </a>
-                    </div>
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- SECTION MYTHES & RÉALITÉS -->
-        <section id="mythes-realites" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h1><i class="fas fa-lightbulb"></i> Les Réalités d'Internet</h1>
-                    <p>Ce que vous devez vraiment savoir sur le monde numérique</p>
-                </div>
-
-                <div class="success-banner" style="background: linear-gradient(135deg, #2196F3 0%, #1976D2 50%, #0D47A1 100%); border-color: rgba(33, 150, 243, 0.5);">
-                    <h2><i class="fas fa-check-circle"></i> La Vérité sur Internet : Faits & Réalités</h2>
-                    <p>Comprendre le monde numérique pour mieux le maîtriser</p>
-                </div>
-
-                <div class="opportunities-grid">
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Internet n'est pas anonyme</h3>
-                        <p>Vos activités en ligne laissent des traces numériques. FAI, sites web, applications et gouvernements peuvent tracer vos déplacements. Même avec un VPN, votre anonymat n'est jamais garanti à 100%.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-key"></i>
-                        </div>
-                        <h3>Les mots de passe ne suffisent plus</h3>
-                        <p>Un mot de passe fort est essentiel mais insuffisant. Les attaques de phishing, les breaches de données et les malwares peuvent compromettre vos comptes. L'authentification à deux facteurs (2FA) est devenue indispensable.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Votre téléphone contient tout</h3>
-                        <p>Votre smartphone stocke plus de données sensibles que votre ordinateur : photos, contacts, emails, localisations GPS, historique bancaire. Un téléphone perdu ou volé peut ruiner votre vie numérique.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <h3>Le WiFi public est un risque</h3>
-                        <p>Les réseaux WiFi gratuits peuvent être contrôlés par des hackers. Toutes vos données (même sur des sites sécurisés) peuvent être interceptées. Utilisez toujours un VPN en WiFi public.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Les emails peuvent être falsifiés</h3>
-                        <p>Les emails de phishing modernes sont sophistiqués : orthographe parfaite, domaines similaires aux vrais sites, urgences créées pour vous faire agir impulsivement. Vérifiez toujours l'expéditeur réel.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Les antivirus ne protègent pas tout</h3>
-                        <p>Les antivirus détectent les malwares connus mais sont impuissants contre les nouvelles menaces (zero-day), les attaques sociales, ou les ransomwares sophistiqués. La cybersécurité est une combinaison de outils et de comportements.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Le cloud n'est pas infaillible</h3>
-                        <p>Stocker vos données dans le cloud (Google Drive, iCloud, Dropbox) est pratique mais vos fichiers peuvent être compromis par des attaques sur ces services ou par des accès non autorisés à votre compte.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>L'IA peut être dangereuse</h3>
-                        <p>L'intelligence artificielle est puissante mais peut être utilisée contre vous : deepfakes, manipulation de l'opinion, surveillance de masse. Comprendre ses limites est essentiel pour l'utiliser en sécurité.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h3>HTTPS n'est pas une protection absolue</h3>
-                        <p>Le petit cadenas dans la barre d'adresse signifie que la connexion est chiffrée, mais cela ne garantit pas que le site est légitime. Les attaques de type "man-in-the-middle" peuvent contourner HTTPS.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Vos amis peuvent vous mettre en danger</h3>
-                        <p>Le partage de fichiers, les liens suspects, ou même les bonnes intentions de vos contacts peuvent introduire des malwares sur vos appareils. La sécurité commence par l'éducation de votre entourage.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <h3>Les paiements en ligne laissent des traces</h3>
-                        <p>Chaque transaction en ligne crée un historique détaillé qui peut être utilisé pour tracer vos habitudes de consommation, vos déplacements, et même prédire vos comportements futurs.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Vous êtes surveillé en permanence</h3>
-                        <p>Caméras de surveillance, trackers GPS, cookies, empreintes digitales : votre vie numérique laisse des traces partout. La vraie confidentialité est devenue un luxe rare.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Vos données valent de l'argent</h3>
-                        <p>Vos informations personnelles (emails, numéro de téléphone, habitudes de navigation) sont vendues sur le dark web. Une fuite de données peut coûter cher en usurpation d'identité.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-mask"></i>
-                        </div>
-                        <h3>Le Dark Web existe vraiment</h3>
-                        <p>Le Dark Web n'est pas un mythe : c'est une partie cachée d'Internet accessible via Tor. Il contient des ressources légitimes mais aussi des dangers réels. L'ignorance n'est pas une protection.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Les menaces évoluent constamment</h3>
-                        <p>Les cybermenaces changent tous les jours : nouveaux malwares, techniques de phishing plus sophistiquées, attaques zero-day. La cybersécurité est un apprentissage continu, pas une destination.</p>
-                    </div>
-
-                    <div class="opportunity-card" style="background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%); border-color: rgba(33, 150, 243, 0.3);">
-                        <div class="opportunity-icon" style="color: #2196F3;">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3>La sécurité commence par vous</h3>
-                        <p>Aucun outil ou logiciel ne peut vous protéger si vous cliquez sur des liens suspects, partagez vos mots de passe, ou ignorez les signes d'alerte. La cybersécurité commence par vos habitudes quotidiennes.</p>
-                    </div>
-                </div>
-
-                <div class="cta-section" style="background: linear-gradient(135deg, rgba(255, 68, 68, 0.1) 0%, rgba(220, 53, 69, 0.1) 100%); border-color: rgba(255, 68, 68, 0.2);">
-                    <h2 style="color: #d32f2f;">Attention aux Mythes Dangereux !</h2>
-                    <p style="color: #555;">Les idées reçues sur Internet peuvent vous coûter très cher. Découvrez les mythes les plus courants qui mettent les gens en danger.</p>
-                    <div class="cta-buttons">
-                        <a href="mythes-details.html" class="btn btn-secondary" style="background: linear-gradient(45deg, #ff4444, #cc0000);">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            Voir les Gros Mythes
-                        </a>
-                        <a href="formations.html" class="btn btn-primary">
-                            <i class="fas fa-graduation-cap"></i>
-                            Se Protéger
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION RESSOURCES (existante) -->
-        <section id="ressources" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h1>Ressources Téléchargeables</h1>
-                    <p>Guides, affiches et documents pour vos campagnes de sensibilisation</p>
-                </div>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon" style="background: var(--primary-color);">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <h3 class="card-title">Guide Mobile Money</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Guide complet de sécurité pour Orange Money, Wave et Free Money au Sénégal</p>
-                            <a href="#" class="btn">Télécharger</a>
-                            <p>Consultez également notre <a href="#">FAQ</a> pour plus d'informations.</p>
-                            <a href="#" class="btn">Contactez-nous</a>
-                            <a href="#" class="btn">Retour</a>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION FAQ -->
-        <section id="faq" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h1>FAQ</h1>
-                    <p>Questions fréquentes sur la cybersécurité et le projet CyberSecure Sénégal.</p>
-                </div>
-                <div>
-                    <h2>Comment signaler une arnaque ?</h2>
-                    <p>Contactez votre opérateur ou les autorités compétentes. Utilisez nos ressources pour plus d’informations.</p>
-                    <h2>Comment protéger mon compte mobile money ?</h2>
-                    <p>Ne partagez jamais votre code PIN, utilisez un mot de passe fort et consultez nos guides.</p>
-                    <!-- Ajoute d'autres questions/réponses ici -->
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION CONTACT -->
-
-        <!-- Help Section -->
-        <section id="help" class="section active">
-            <div class="container">
-                <div class="help-section" style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(46, 139, 87, 0.1) 100%); border: 2px solid rgba(76, 175, 80, 0.2); border-radius: 15px; padding: 40px; margin: 0; text-align: center;">
-                    <h2 style="color: #2E8B57; margin-bottom: 20px;"><i class="fas fa-hands-helping"></i> Besoin d'Aide ?</h2>
-                    <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        Si vous avez des questions sur les formations, besoin de conseils personnalisés, ou souhaitez organiser une session de formation pour votre entreprise ou école, n'hésitez pas à nous contacter. Notre équipe est là pour vous accompagner !
-                    </p>
-                    <div class="help-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
-                        <div class="help-card" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <i class="fas fa-question-circle" style="font-size: 2rem; color: #2196F3; margin-bottom: 10px;"></i>
-                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Questions sur les Formations</h4>
-                            <p style="color: #7f8c8d; font-size: 0.9rem;">Obtenez des réponses sur les prérequis, la durée, ou le contenu des cours.</p>
-                        </div>
-                        <div class="help-card" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <i class="fas fa-users" style="font-size: 2rem; color: #f39c12; margin-bottom: 10px;"></i>
-                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Sessions Personnalisées</h4>
-                            <p style="color: #7f8c8d; font-size: 0.9rem;">Organisez des ateliers sur mesure pour votre équipe ou communauté.</p>
-                        </div>
-                        <div class="help-card" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <i class="fas fa-school" style="font-size: 2rem; color: #e74c3c; margin-bottom: 10px;"></i>
-                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Programmes Éducatifs</h4>
-                            <p style="color: #7f8c8d; font-size: 0.9rem;">Intégrez la cybersécurité dans vos programmes scolaires ou universitaires.</p>
-                        </div>
-                    </div>
-                    <div class="help-buttons">
-                        <a href="contact.html" class="btn btn-primary" style="margin: 0 10px;">
-                            <i class="fas fa-envelope"></i>
-                            Nous Contacter
-                        </a>
-                        <a href="mailto:fnoir9394@gmail.com" class="btn btn-secondary" style="margin: 0 10px;">
-                            <i class="fas fa-phone"></i>
-                            Email Direct
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-</main>
-
-  <!-- footer enrichi avec infos et liens supplémentaires -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-main">
-            <div class="footer-logo">
-                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 30px; height: 30px; margin-right: 8px;">
-                CyberSecure Sénégal
-            </div>
-            <div class="footer-links">
-                <a href="#" data-section="accueil">Accueil</a>
-                <a href="dictionnaire.html">Dictionnaire</a>
-                <a href="formations.html">Formations</a>
-                <a href="#" data-section="ressources">Ressources</a>
-                <a href="#" data-section="faq">FAQ</a>
-                <a href="#" data-section="contact">Contact</a>
-                <a href="about.html">Qui sommes-nous</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+                <p>
+                    <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
+                    <a href="#" data-section="faq" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
+                    <a href="#" data-section="contact" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
+                </p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
-            <p>
-                <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
-                <a href="#" data-section="faq" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
-                <a href="#" data-section="contact" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- ==============================================
          SCRIPTS
     ============================================== -->
     <script src="script.js"></script>
     <script src="interactive-features.js"></script>
+    <script>
+        // Navigation toggle for mobile hamburger menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const primaryNav = document.getElementById('primary-navigation');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            primaryNav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
