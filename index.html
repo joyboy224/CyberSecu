@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="interactive-styles.css" />
 </head>
 <body>
+    <div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
     <!-- ==============================================
          HEADER & NAVIGATION
     ============================================== -->
@@ -291,12 +298,12 @@
                     CyberSecure Sénégal
                 </div>
                 <div class="footer-links">
-                    <a href="#" data-section="accueil">Accueil</a>
+                    <a href="index.html">Accueil</a>
                     <a href="dictionnaire.html">Dictionnaire</a>
                     <a href="formations.html">Formations</a>
-                    <a href="#" data-section="ressources">Ressources</a>
-                    <a href="#" data-section="faq">FAQ</a>
-                    <a href="#" data-section="contact">Contact</a>
+                    <a href="ressources.html">Ressources</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
                     <a href="about.html">Qui sommes-nous</a>
                 </div>
                 <div class="footer-social">
@@ -305,14 +312,14 @@
                     <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
-                <p>
-                    <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
-                    <a href="#" data-section="faq" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
-                    <a href="#" data-section="contact" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
-                </p>
-            </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+                    <p>
+                        <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
+                        <a href="faq.html" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
+                        <a href="contact.html" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
+                    </p>
+                </div>
         </div>
     </footer>
 
@@ -320,17 +327,8 @@
          SCRIPTS
     ============================================== -->
     <script src="script.js"></script>
-    <script src="interactive-features.js"></script>
-    <script>
-        // Navigation toggle for mobile hamburger menu
-        const navToggle = document.querySelector('.nav-toggle');
-        const primaryNav = document.getElementById('primary-navigation');
 
-        navToggle.addEventListener('click', () => {
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
-            primaryNav.classList.toggle('active');
-        });
-    </script>
+    <script src="interactive-features.js"></script>
+
 </body>
 </html>

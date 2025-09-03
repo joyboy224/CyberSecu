@@ -9,26 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;">
-                <span>CyberSecure Sénégal</span>
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="comprendre-internet.html" class="nav-link">Comprendre Internet</a></li>
-                    <li><a href="dictionnaire.html" class="nav-link">Dictionnaire</a></li>
-                    <li><a href="formations.html" class="nav-link">Formations</a></li>
-                    <li><a href="opportunites.html" class="nav-link">Opportunités & Risques</a></li>
-                    <li><a href="mythes-realites.html" class="nav-link">Mythes & Réalités</a></li>
-                    <li><a href="ressources.html" class="nav-link active">Ressources</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+   <!-- HEADER & NAVIGATION -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
+            <span>CyberSecure Sénégal</span>
         </div>
-    </header>
+        <!-- Hamburger menu button for mobile -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="primary-navigation">
+            <ul class="nav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="comprendre-internet.html" class="nav-link">Comprendre Internet</a></li>
+                <li><a href="dictionnaire.html" class="nav-link">Dictionnaire</a></li>
+                <li><a href="formations.html" class="nav-link">Formations</a></li>
+                <li><a href="opportunites.html" class="nav-link">Opportunités & Risques</a></li>
+                <li><a href="mythes-realites.html" class="nav-link">Mythes & Réalités</a></li>
+                <li><a href="ressources.html" class="nav-link">Ressources</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main class="main">
         <section class="section active">
@@ -593,5 +605,16 @@
             </div>
         </div>
     </footer>
+    <script>
+document.querySelectorAll('#primary-navigation .nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        // Ferme le menu hamburger après le clic sur un lien
+        document.getElementById('primary-navigation').classList.remove('active');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+    });
+});
+</script>
+    <script src="interactive-features.js"></script>
+
 </body>
 </html>

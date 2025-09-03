@@ -236,3 +236,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser la timeline
     initTimeline();
 });
+// Gestion du menu hamburger sur toutes les pages
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const primaryNav = document.getElementById('primary-navigation');
+
+    if (navToggle && primaryNav) {
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            primaryNav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#primary-navigation .nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                primaryNav.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+});
+  

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ - CyberSecure Sénégal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="interactive-styles.css" />
+</head>
+<body>
+    <!-- ==============================================
+         HEADER & NAVIGATION
+    ============================================== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
+                <span>CyberSecure Sénégal</span>
+            </div>
+            <!-- Hamburger menu button for mobile -->
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="primary-navigation">
+                <ul class="nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="comprendre-internet.html" class="nav-link">Comprendre Internet</a></li>
+                    <li><a href="dictionnaire.html" class="nav-link">Dictionnaire</a></li>
+                    <li><a href="formations.html" class="nav-link">Formations</a></li>
+                    <li><a href="opportunites.html" class="nav-link">Opportunités & Risques</a></li>
+                    <li><a href="mythes-realites.html" class="nav-link">Mythes & Réalités</a></li>
+                    <li><a href="ressources.html" class="nav-link">Ressources</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Cart Indicator -->
+            <div class="cart-indicator" id="cart-indicator">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+                <div class="cart-tooltip">Panier vide</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         MAIN CONTENT
+    ============================================== -->
+    <main class="main">
+        <section class="section active">
+            <div class="container">
+                <!-- Page Header -->
+                <div class="section-title">
+                    <h1><i class="fas fa-question-circle"></i> Questions Fréquemment Posées</h1>
+                    <p>Trouvez les réponses à vos questions sur la cybersécurité au Sénégal</p>
+                </div>
+
+                <!-- FAQ Categories -->
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="general">
+                        <i class="fas fa-shield-alt"></i>
+                        Questions Générales
+                    </button>
+                    <button class="faq-category-btn" data-category="site">
+                        <i class="fas fa-globe"></i>
+                        Site & Formations
+                    </button>
+                    <button class="faq-category-btn" data-category="technical">
+                        <i class="fas fa-cogs"></i>
+                        Questions Techniques
+                    </button>
+                </div>
+
+                <!-- FAQ Content -->
+                <div class="faq-content">
+                    <!-- Questions Générales -->
+                    <div class="faq-category-content active" id="general">
+                        <h2><i class="fas fa-shield-alt"></i> Questions Générales sur la Cybersécurité</h2>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Qu'est-ce que la cybersécurité et pourquoi est-elle importante ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>La cybersécurité désigne l'ensemble des pratiques et technologies visant à protéger les systèmes informatiques, les réseaux et les données contre les menaces numériques. Au Sénégal, elle est particulièrement importante car :</p>
+                                <ul>
+                                    <li>Le Mobile Money représente une part importante des transactions financières</li>
+                                    <li>Les réseaux sociaux sont très utilisés pour les communications</li>
+                                    <li>Les cyberattaques peuvent avoir un impact direct sur la vie quotidienne</li>
+                                    <li>La protection des données personnelles est cruciale dans notre société numérique</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Quels sont les risques les plus courants sur Internet au Sénégal ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Les menaces les plus fréquentes au Sénégal incluent :</p>
+                                <ul>
+                                    <li><strong>Arnaques aux Mobile Money</strong> : Tentatives de vol de codes PIN ou de numéros de téléphone</li>
+                                    <li><strong>Phishing</strong> : Messages frauduleux sur WhatsApp, SMS ou emails</li>
+                                    <li><strong>Arnaques aux réseaux sociaux</strong> : Comptes fake demandant de l'argent</li>
+                                    <li><strong>Malware</strong> : Logiciels malveillants via des applications piratées</li>
+                                    <li><strong>Usurpation d'identité</strong> : Vol de données personnelles pour des fraudes</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment reconnaître un message ou un site frauduleux ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Signes d'alerte pour identifier les fraudes :</p>
+                                <ul>
+                                    <li><strong>Messages urgents</strong> : "Votre compte va être bloqué" ou "Action immédiate requise"</li>
+                                    <li><strong>Demandes de codes confidentiels</strong> : PIN, mot de passe, ou informations bancaires</li>
+                                    <li><strong>Liens suspects</strong> : URLs raccourcies ou domaines étranges</li>
+                                    <li><strong>Erreurs grammaticales</strong> : Messages mal écrits ou avec des fautes</li>
+                                    <li><strong>Numéros inconnus</strong> : Appels de personnes se faisant passer pour des opérateurs</li>
+                                    <li><strong>Promesses trop belles</strong> : "Gagnez de l'argent facilement" ou "Prix gagné"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Que faire si je pense avoir été victime d'une arnaque en ligne ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Actions immédiates à prendre :</p>
+                                <ol>
+                                    <li><strong>Ne paniquez pas</strong> et gardez votre calme</li>
+                                    <li><strong>Changez immédiatement vos mots de passe</strong> et codes PIN</li>
+                                    <li><strong>Contactez votre opérateur Mobile Money</strong> pour bloquer les transactions</li>
+                                    <li><strong>Signalez l'incident</strong> à la police ou aux autorités compétentes</li>
+                                    <li><strong>Conservez toutes les preuves</strong> : captures d'écran, messages, numéros</li>
+                                    <li><strong>Contactez votre banque</strong> si des fonds ont été débités</li>
+                                </ol>
+                                <p><strong>Numéros utiles au Sénégal :</strong></p>
+                                <ul>
+                                    <li>Police : 17</li>
+                                    <li>Gendarmerie : 160</li>
+                                    <li>ARTP (pour signaler les spam) : 800 00 20 20</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment protéger mes données personnelles sur les réseaux sociaux ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Bonnes pratiques pour Facebook, WhatsApp et autres réseaux :</p>
+                                <ul>
+                                    <li><strong>Paramètres de confidentialité</strong> : Rendez votre profil privé</li>
+                                    <li><strong>Acceptez uniquement les amis connus</strong> en personne</li>
+                                    <li><strong>Ne partagez pas d'informations sensibles</strong> : numéro de téléphone, adresse</li>
+                                    <li><strong>Utilisez l'authentification à deux facteurs</strong> (2FA)</li>
+                                    <li><strong>Vérifiez les demandes d'amis</strong> avant d'accepter</li>
+                                    <li><strong>Signalez les comptes suspects</strong> aux plateformes</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Quels sont les bons réflexes pour sécuriser mon téléphone ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Protection de votre smartphone Android/iOS :</p>
+                                <ul>
+                                    <li><strong>Mettez à jour régulièrement</strong> le système et les applications</li>
+                                    <li><strong>Installez uniquement des applications officielles</strong> (Play Store/App Store)</li>
+                                    <li><strong>Utilisez un code PIN ou empreinte digitale</strong> pour verrouiller l'appareil</li>
+                                    <li><strong>Activez le "Trouver mon téléphone"</strong> (Find My iPhone/Google Find My Device)</li>
+                                    <li><strong>Évitez les réseaux WiFi publics</strong> pour les transactions sensibles</li>
+                                    <li><strong>Installez une solution antivirus</strong> reconnue</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment choisir un mot de passe sécurisé ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Critères pour un mot de passe fort :</p>
+                                <ul>
+                                    <li><strong>Longueur minimale</strong> : 12 caractères ou plus</li>
+                                    <li><strong>Mélange de caractères</strong> : majuscules, minuscules, chiffres, symboles</li>
+                                    <li><strong>Pas de mots du dictionnaire</strong> ou informations personnelles</li>
+                                    <li><strong>Unique pour chaque compte</strong> : n'utilisez pas le même mot de passe partout</li>
+                                    <li><strong>Utilisez un gestionnaire de mots de passe</strong> pour les mémoriser</li>
+                                </ul>
+                                <p><strong>Exemple de bon mot de passe :</strong> "Sénégal2024!Cyber$" (pas celui-ci bien sûr !)</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Que dois-je faire si je reçois un SMS ou un appel suspect ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Procédure à suivre :</p>
+                                <ol>
+                                    <li><strong>Ne cliquez sur aucun lien</strong> dans le SMS suspect</li>
+                                    <li><strong>Ne donnez aucune information personnelle</strong> par téléphone</li>
+                                    <li><strong>Raccrochez immédiatement</strong> si c'est un appel suspect</li>
+                                    <li><strong>Vérifiez auprès de l'opérateur officiel</strong> en appelant leur numéro direct</li>
+                                    <li><strong>Signalez le SMS</strong> en transférant au 2424 (Orange) ou équivalent</li>
+                                    <li><strong>Conservez le message</strong> comme preuve si nécessaire</li>
+                                </ol>
+                                <p><strong>Rappel important :</strong> Aucun opérateur légitime ne demande vos codes PIN par SMS ou téléphone !</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Est-ce que les opérateurs demandent vraiment des codes PIN par téléphone ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>NON !</strong> C'est une arnaque courante au Sénégal.</p>
+                                <p>Les opérateurs légitimes (Orange, Free, Expresso) <strong>NE DEMANDENT JAMAIS</strong> :</p>
+                                <ul>
+                                    <li>Vos codes PIN ou mots de passe par téléphone</li>
+                                    <li>Vos informations bancaires</li>
+                                    <li>De l'argent pour "débloquer" votre ligne</li>
+                                    <li>Des codes de validation par SMS</li>
+                                </ul>
+                                <p>Si quelqu'un vous contacte en prétendant être de votre opérateur pour demander ces informations, c'est une arnaque ! Raccrochez et signalez l'incident.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment signaler une tentative de phishing ou d'arnaque ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Plusieurs canaux pour signaler les cybermenaces :</p>
+                                <ul>
+                                    <li><strong>ARTP</strong> : Autorité de Régulation des Télécommunications - 800 00 20 20</li>
+                                    <li><strong>Police nationale</strong> : 17 ou visitez un commissariat</li>
+                                    <li><strong>Opérateurs mobiles</strong> : Services de signalement spécifiques</li>
+                                    <li><strong>Plateformes en ligne</strong> : Facebook, WhatsApp pour les comptes frauduleux</li>
+                                    <li><strong>CyberSecure Sénégal</strong> : Contactez-nous pour assistance</li>
+                                </ul>
+                                <p>Conservez toujours les preuves : captures d'écran, messages, numéros d'appel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questions sur le Site et Formations -->
+                    <div class="faq-category-content" id="site">
+                        <h2><i class="fas fa-globe"></i> Questions sur le Site et les Formations</h2>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>À qui s'adresse ce site ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>CyberSecure Sénégal s'adresse à tous les citoyens sénégalais, quels que soient leur âge et leur niveau de connaissance :</p>
+                                <ul>
+                                    <li><strong>Les jeunes</strong> : Pour apprendre les bases d'Internet et éviter les pièges</li>
+                                    <li><strong>Les adultes</strong> : Pour sécuriser leurs transactions Mobile Money et données</li>
+                                    <li><strong>Les seniors</strong> : Pour comprendre les menaces numériques adaptées à leur usage</li>
+                                    <li><strong>Les professionnels</strong> : Pour former leur équipe aux bonnes pratiques</li>
+                                    <li><strong>Les communautés</strong> : Pour des sessions de sensibilisation collective</li>
+                                </ul>
+                                <p>Notre contenu est adapté au contexte sénégalais et aux réalités locales.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment participer à une formation ou une session personnalisée ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Plusieurs options pour participer à nos formations :</p>
+                                <ul>
+                                    <li><strong>Formations en ligne</strong> : Suivez nos modules interactifs gratuitement</li>
+                                    <li><strong>Sessions communautaires</strong> : Contactez-nous pour organiser une session dans votre quartier</li>
+                                    <li><strong>Formations d'entreprise</strong> : Pour les équipes professionnelles</li>
+                                    <li><strong>Ateliers scolaires</strong> : Sensibilisation dans les établissements éducatifs</li>
+                                </ul>
+                                <p>Contactez-nous via le formulaire de contact ou par email pour organiser une session personnalisée dans votre communauté.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Les conseils proposés sont-ils adaptés à tous les âges ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui, nos conseils sont adaptés à tous les âges :</p>
+                                <ul>
+                                    <li><strong>Pour les jeunes</strong> : Focus sur les réseaux sociaux et jeux en ligne</li>
+                                    <li><strong>Pour les adultes</strong> : Accent sur Mobile Money et transactions financières</li>
+                                    <li><strong>Pour les seniors</strong> : Explications simples et exemples concrets</li>
+                                    <li><strong>Pour tous</strong> : Conseils universels de sécurité de base</li>
+                                </ul>
+                                <p>Nous utilisons un langage accessible et des exemples tirés de la vie quotidienne sénégalaise.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Où trouver des ressources pour approfondir mes connaissances ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Plusieurs ressources disponibles :</p>
+                                <ul>
+                                    <li><strong>Section Ressources</strong> : Guides téléchargeables et affiches</li>
+                                    <li><strong>Dictionnaire Cyber-menaces</strong> : Explications détaillées des termes techniques</li>
+                                    <li><strong>Section Mythes & Réalités</strong> : Démystification des idées reçues</li>
+                                    <li><strong>Formations interactives</strong> : Modules d'apprentissage progressif</li>
+                                    <li><strong>Quiz de connaissances</strong> : Pour tester et renforcer vos acquis</li>
+                                </ul>
+                                <p>Toutes nos ressources sont gratuites et disponibles en français.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment contacter l'équipe CyberSecure Sénégal ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Plusieurs moyens de nous contacter :</p>
+                                <ul>
+                                    <li><strong>Formulaire de contact</strong> : Page Contact du site</li>
+                                    <li><strong>Email</strong> : contact@cybersecuresenegal.sn</li>
+                                    <li><strong>Réseaux sociaux</strong> : Facebook et WhatsApp</li>
+                                    <li><strong>Téléphone</strong> : Pour les urgences cybersécurité</li>
+                                </ul>
+                                <p>Notre équipe répond généralement sous 24-48 heures. Pour les urgences, contactez directement les autorités compétentes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questions Techniques -->
+                    <div class="faq-category-content" id="technical">
+                        <h2><i class="fas fa-cogs"></i> Questions Techniques</h2>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Qu'est-ce qu'un malware ? Comment s'en protéger ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Un malware (logiciel malveillant) est un programme conçu pour endommager ou infiltrer un système informatique.</p>
+                                <p><strong>Types courants au Sénégal :</strong></p>
+                                <ul>
+                                    <li><strong> virus</strong> : Se propagent via USB ou applications piratées</li>
+                                    <li><strong>Spyware</strong> : Espionne vos activités (clavier, écran)</li>
+                                    <li><strong>Ransomware</strong> : Crypte vos fichiers et demande une rançon</li>
+                                    <li><strong>Trojan</strong> : Se fait passer pour un programme légitime</li>
+                                </ul>
+                                <p><strong>Protection :</strong></p>
+                                <ul>
+                                    <li>Installez uniquement des applications officielles</li>
+                                    <li>Utilisez un antivirus reconnu</li>
+                                    <li>Évitez les liens suspects et pièces jointes</li>
+                                    <li>Mettez à jour votre système régulièrement</li>
+                                    <li>Faites des sauvegardes régulières de vos données</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Qu'est-ce qu'un VPN et pourquoi l'utiliser ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Un VPN (Virtual Private Network) crée un tunnel sécurisé entre votre appareil et Internet.</p>
+                                <p><strong>Avantages au Sénégal :</strong></p>
+                                <ul>
+                                    <li><strong>Protection sur WiFi public</strong> : Cafés, hôtels, aéroports</li>
+                                    <li><strong>Confidentialité</strong> : Masque votre adresse IP réelle</li>
+                                    <li><strong>Sécurité des transactions</strong> : Mobile Money et banque en ligne</li>
+                                    <li><strong>Contournement de restrictions</strong> : Accès à certains contenus</li>
+                                </ul>
+                                <p><strong>Quand l'utiliser :</strong></p>
+                                <ul>
+                                    <li>Connexions WiFi publiques</li>
+                                    <li>Transactions financières sensibles</li>
+                                    <li>Navigation sur réseaux non sécurisés</li>
+                                </ul>
+                                <p>Choisissez un VPN reconnu et gratuit pour débuter, mais optez pour une version payante pour un usage régulier.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment savoir si mon appareil est infecté ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Signes d'infection par un malware :</p>
+                                <ul>
+                                    <li><strong>Ralentissement inhabituel</strong> de l'appareil</li>
+                                    <li><strong>Batterie qui se décharge rapidement</strong></li>
+                                    <li><strong>Applications qui se ferment seules</strong></li>
+                                    <li><strong>Pop-ups intempestifs</strong> ou publicités</li>
+                                    <li><strong>Données mobiles consommées anormalement</strong></li>
+                                    <li><strong>Fichiers qui disparaissent</strong> ou sont modifiés</li>
+                                    <li><strong>Composants qui chauffent excessivement</strong></li>
+                                </ul>
+                                <p><strong>Actions à prendre :</strong></p>
+                                <ol>
+                                    <li>Installez un antivirus et faites un scan complet</li>
+                                    <li>Changez tous vos mots de passe</li>
+                                    <li>Contactez un technicien de confiance</li>
+                                    <li>Évitez d'utiliser l'appareil pour des transactions sensibles</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Que faire en cas de ransomware ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Le ransomware crypte vos fichiers et demande une rançon pour les déchiffrer.</p>
+                                <p><strong>Procédure d'urgence :</strong></p>
+                                <ol>
+                                    <li><strong>Déconnectez immédiatement</strong> l'appareil d'Internet</li>
+                                    <li><strong>N'éteignez pas l'appareil</strong> (risque de corruption)</li>
+                                    <li><strong>Ne payez JAMAIS la rançon</strong> (pas de garantie de récupération)</li>
+                                    <li><strong>Contactez un professionnel</strong> pour tenter la récupération</li>
+                                    <li><strong>Signalez à la police</strong> avec toutes les preuves</li>
+                                </ol>
+                                <p><strong>Prévention :</strong></p>
+                                <ul>
+                                    <li>Sauvegardes régulières sur des supports externes</li>
+                                    <li>Ne cliquez pas sur liens suspects</li>
+                                    <li>Mettez à jour vos logiciels</li>
+                                    <li>Utilisez un antivirus efficace</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment sécuriser mes transactions Mobile Money ?</h3>
+                                <i class="fas fa-chevron-down faq-toggle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Le Mobile Money est très utilisé au Sénégal, mais aussi très ciblé par les arnaques.</p>
+                                <p><strong>Bonnes pratiques :</strong></p>
+                                <ul>
+                                    <li><strong>Activez l'authentification biométrique</strong> si disponible</li>
+                                    <li><strong>Utilisez des codes PIN complexes</strong> (pas 0000 ou 1234)</li>
+                                    <li><strong>Vérifiez toujours le destinataire</strong> avant d'envoyer</li>
+                                    <li><strong>Ne partagez jamais vos codes</strong> par téléphone ou SMS</li>
+                                    <li><strong>Activez les notifications SMS</strong> pour chaque transaction</li>
+                                    <li><strong>Utilisez des applications officielles</strong> des opérateurs</li>
+                                    <li><strong>Évitez les transactions sur WiFi public</strong></li>
+                                </ul>
+                                <p><strong>En cas de problème :</strong> Contactez immédiatement votre opérateur et bloquez les transactions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer enrichi avec infos et liens supplémentaires -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Cyber Gardien Logo" style="width: 30px; height: 30px; margin-right: 8px;" />
+                    CyberSecure Sénégal
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="dictionnaire.html">Dictionnaire</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="ressources.html">Ressources</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">Qui sommes-nous</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberSecure Sénégal. Tous droits réservés.</p>
+                <p>
+                    <a href="about.html" style="color:var(--secondary-color);text-decoration:underline;">Qui sommes-nous</a> |
+                    <a href="faq.html" style="color:var(--secondary-color);text-decoration:underline;">FAQ</a> |
+                    <a href="contact.html" style="color:var(--secondary-color);text-decoration:underline;">Contact</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+         SCRIPTS
+    ============================================== -->
+    <script src="script.js"></script>
+    <script src="interactive-features.js"></script>
+    <script>
+        // Navigation toggle for mobile hamburger menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const primaryNav = document.getElementById('primary-navigation');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            primaryNav.classList.toggle('active');
+        });
+
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category switching
+            const categoryButtons = document.querySelectorAll('.faq-category-btn');
+            const categoryContents = document.querySelectorAll('.faq-category-content');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    categoryContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    const category = button.getAttribute('data-category');
+                    document.getElementById(category).classList.add('active');
+                });
+            });
+
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+
+                question.addEventListener('click', () => {
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').style.display = 'none';
+                            otherItem.querySelector('.faq-toggle').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        toggle.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.display = 'block';
+                        toggle.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

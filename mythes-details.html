@@ -184,6 +184,13 @@
     </style>
 </head>
 <body>
+    <div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -473,5 +480,16 @@
             </div>
         </div>
     </footer>
+    <script>
+document.querySelectorAll('#primary-navigation .nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        // Ferme le menu hamburger après le clic sur un lien
+        document.getElementById('primary-navigation').classList.remove('active');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+    });
+});
+</script>
+    <script src="interactive-features.js"></script>
+
 </body>
 </html>
